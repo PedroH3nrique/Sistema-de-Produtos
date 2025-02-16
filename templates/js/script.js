@@ -2,8 +2,9 @@
 const btnMenu = document.getElementById('btnMenu')
 const menuImg = document.getElementById('menuImg')
 const nav = document.getElementById('nav')
-const inpt = document.getElementById('inpt')
-const label = document.querySelector('.campo label')
+//const inpt = document.getElementById('inpt')
+//const label = document.querySelector('.campo label')
+const campos = document.querySelectorAll('.campo');
 
 let isMenuOpen = false
 
@@ -24,18 +25,24 @@ function abrir() {
 //fim de menu
 //label daora
 
-function checkInput() {
-    if (inpt.value) {
-        label.classList.add('focado');
-    } else {
-        label.classList.remove('focado');
+campos.forEach(campo => {
+    const inpt = campo.querySelector('input');
+    const label = campo.querySelector('label');
+
+    // Função para verificar se o input está vazio
+    function checkInput() {
+        if (inpt.value) {
+            label.classList.add('focado');
+        } else {
+            label.classList.remove('focado');
+        }
     }
-}
 
-// Adiciona eventos para focar e desfocar
-inpt.addEventListener('focus', () => {
-    label.classList.add('focado');
+    // Adiciona eventos para focar e desfocar
+    inpt.addEventListener('focus', () => {
+        label.classList.add('focado');
+    });
+
+    inpt.addEventListener('blur', checkInput);
+    inpt.addEventListener('input', checkInput); // Verifica se o valor do input muda
 });
-
-inpt.addEventListener('blur', checkInput);
-inpt.addEventListener('input', checkInput);
