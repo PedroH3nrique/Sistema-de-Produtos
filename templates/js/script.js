@@ -1,4 +1,8 @@
 //variaveis
+//label daora
+const label = document.querySelectorAll('label')
+const inpt = document.getElementById('inpt')
+//menu
 const btnMenu = document.getElementById('btnMenu')
 const menuImg = document.getElementById('menuImg')
 const nav = document.getElementById('nav')
@@ -18,4 +22,19 @@ function abrir() {
         nav.style.display = 'none'
     }
 }
+//fim de menu
 
+
+//label daora
+inpt.addEventListener('focus', () => {
+    if(inpt.value.length > 0){
+        label.classList.add('focado');
+    }
+    //
+});
+
+/*inpt.addEventListener('blur', () => {
+    if (inpt.value === '') {
+        label.classList.remove('focado');
+    }
+});*/
