@@ -1,8 +1,4 @@
 //variaveis
-//label daora
-const label = document.querySelectorAll('label')
-const inpt = document.getElementById('inpt')
-//menu
 const btnMenu = document.getElementById('btnMenu')
 const menuImg = document.getElementById('menuImg')
 const nav = document.getElementById('nav')
