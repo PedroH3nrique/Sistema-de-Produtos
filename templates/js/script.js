@@ -2,6 +2,9 @@
 const btnMenu = document.getElementById('btnMenu')
 const menuImg = document.getElementById('menuImg')
 const nav = document.getElementById('nav')
+const inpt = document.getElementById('inpt')
+const label = document.querySelector('.campo label')
+
 let isMenuOpen = false
 
 function abrir() {
@@ -19,15 +22,20 @@ function abrir() {
     }
 }
 //fim de menu
-
-
 //label daora
-if(inpt.ariaValueMax.length == 0){
-    alert('ola')
-}
 
-/*inpt.addEventListener('blur', () => {
-    if (inpt.value === '') {
+function checkInput() {
+    if (inpt.value) {
+        label.classList.add('focado');
+    } else {
         label.classList.remove('focado');
     }
-});*/
+}
+
+// Adiciona eventos para focar e desfocar
+inpt.addEventListener('focus', () => {
+    label.classList.add('focado');
+});
+
+inpt.addEventListener('blur', checkInput);
+inpt.addEventListener('input', checkInput);
