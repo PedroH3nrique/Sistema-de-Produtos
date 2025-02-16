@@ -11,7 +11,7 @@ form {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    margin-bottom: 70   px;
+    margin-bottom: 70px;
 }
 
 input[type="text"] {
