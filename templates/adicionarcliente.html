@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home-Dashboard</title>
+    <link rel="stylesheet" href="css/forms.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="menu">
+
+        <button id="btnMenu" onclick="abrir()"><img id="menuImg" src="assets/menu.svg" alt="Menu"></button>
+
+        <ul id="nav">
+
+            <li><a href="home.html"> <img src="assets/home.svg" alt="">Home</a> </li>
+            <li><a href="home.html" id="home"> <img src="assets/home.svg" alt=""></a> </li>
+            <li class="separator"></li>
+            <li><a href="adicionarcliente.html"> <img src="assets/adicionar_cliente.svg" alt="">Adicionar Cliente</a>
+            </li>
+            <li><a href="adicionarcliente.html" id="cdClt"> <img src="assets/adicionar_cliente.svg" alt=""></a> </li>
+            <li class="separator"></li>
+            <li><a href="cadastrarproduto.html"><img src="assets/cadastrar_produto.svg" alt="">Cadastrar Produto</a>
+            </li>
+            <li><a href="cadastrarproduto.html" id="cdPdt"><img src="assets/cadastrar_produto.svg" alt=""></a></li>
+            <li class="separator"></li>
+            <li><a href="relatorios.html"><img src="assets/relatorio.svg" alt="">Ver relatórios</a></li>
+            <li><a href="relatorios.html" id="rlt"><img src="assets/relatorio.svg" alt=""></a></li>
+
+        </ul>
+
+    </div>
+
+    <main>
+
+        <form action="">
+
+            <div>
+
+                <label class="focado" for="nomeClt">Nome do Cliente</label>
+                <input type="text" name="nomeClt" required>
+
+            </div>
+
+            <input type="submit" value="Enviar">
+
+        </form>
+
+    </main>
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
