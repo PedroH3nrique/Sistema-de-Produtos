@@ -26,12 +26,9 @@ function abrir() {
 
 
 //label daora
-inpt.addEventListener('focus', () => {
-    if(inpt.value.length > 0){
-        label.classList.add('focado');
-    }
-    //
-});
+if(inpt.ariaValueMax.length == 0){
+    alert('ola')
+}
 
 /*inpt.addEventListener('blur', () => {
     if (inpt.value === '') {
